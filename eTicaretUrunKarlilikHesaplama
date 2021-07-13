@@ -1,0 +1,11 @@
+urunAlis = float(input("Ürünün Alış Fiyatı : ")) #Bu satırda ürünün alış fiyatını/maliyetini giriniz
+kdvOran = float(input("KDV Oranı : ")) #Seçeceğiniz KDV oranını ondalık olarak giriniz örneğin 0.18
+alisKdv = urunAlis * kdvOran #Gider olarak göstereceğiniz KDV tutarını hesaplar
+urunSatis = float(input("Ürünün Satış Fiyatı : ")) #Ürünü satmak istediğiniz fiyatı giriniz
+satisKdv = urunSatis * kdvOran #Ödemeniz gerekecek KDV tutarını hesaplar
+komisyonOran = float(input("Komisyon oranı : ")) #Satacağınız kategoriye göre ondalık olarak komisyon oranı giriniz örneğin 0.15
+kargoTutar = float(input("Kargo Tutarı : ")) #Kargo tutarını giriniz
+sonKdv = satisKdv - alisKdv #Alış faturanızdaki KDV'nin düşülmüş halini yani esas ödeyeceğiniz KDV miktarını gösterir
+netKar = urunSatis -  urunAlis  - (komisyonOran * urunSatis) - kargoTutar - sonKdv
+
+print("Net Karınız : " , netKar , " TL")
